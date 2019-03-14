@@ -51,10 +51,12 @@
         android:text="@string/name"
         android:textColor="@color/design_default_color_primary_dark"
         android:textSize="36sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.694" />
+        app:layout_constraintVertical_bias="0.694"
+        tools:textColor="#f4f2f2" />
 
 </android.support.constraint.ConstraintLayout>
