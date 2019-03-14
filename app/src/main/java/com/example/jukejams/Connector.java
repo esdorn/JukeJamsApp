@@ -48,9 +48,9 @@ public class Connector extends AsyncTask<String, String, String> {
     protected void onPostExecute(String message) {
         if (con)
         {
-            Intent i = new Intent(context, JoinedRoom.class);
-            i.putExtra("ip",message);
-            context.startActivity(i);
+            //Intent i = new Intent(context, JoinedRoom.class);
+            //i.putExtra("ip",message);
+            //context.startActivity(i);
         }
         else {
             output.setText(message);
