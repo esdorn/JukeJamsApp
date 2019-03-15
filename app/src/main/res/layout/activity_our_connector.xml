@@ -5,7 +5,7 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:background="#d4bedd"
+    android:background="#120023"
     tools:context=".OurConnector">
 
     <Button
@@ -25,16 +25,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        tools:textColor="#481c8e"
+        tools:textColor="#120023"
         tools:textSize="30sp" />
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="0dp"
-        android:background="?android:attr/windowBackground"
+        android:background="@android:color/transparent"
+        app:itemIconTint="#120023"
+        app:itemTextColor="#120023"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -50,6 +50,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
+        android:shadowColor="@android:color/white"
         android:text="HOST"
         android:textFontWeight="3"
         android:textStyle="bold"
@@ -57,7 +58,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:textColor="#481c8e"
+        tools:textColor="#120023"
         tools:textSize="30sp" />
 
 </android.support.constraint.ConstraintLayout>
