@@ -8,27 +8,24 @@
     tools:background="#d4bedd"
     tools:context=".OurConnector">
 
-    <TextView
-        android:id="@+id/message"
-        android:layout_width="153dp"
-        android:layout_height="51dp"
-        android:layout_marginLeft="136dp"
-        android:layout_marginTop="200dp"
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="122dp"
+        android:layout_height="89dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="120dp"
-        android:background="#f4f2f2"
-        android:text="@string/title_home"
+        android:layout_marginBottom="152dp"
+        android:text="JOIN"
+        android:textFontWeight="3"
         android:textStyle="bold"
-        app:barrierAllowsGoneWidgets="true"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="   HOST"
-        tools:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
         tools:textColor="#481c8e"
-        tools:textSize="36sp" />
+        tools:textSize="30sp" />
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
@@ -42,25 +39,24 @@
         app:layout_constraintRight_toRightOf="parent"
         app:menu="@menu/navigation" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="155dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="139dp"
-        android:layout_marginLeft="139dp"
-        android:layout_marginTop="62dp"
-        android:layout_marginEnd="117dp"
-        android:layout_marginRight="117dp"
-        android:layout_marginBottom="190dp"
-        android:text="TextView"
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="117dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="HOST"
+        android:textFontWeight="3"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/navigation"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/message"
-        tools:background="#f4f2f2"
-        tools:text="   JOIN"
+        app:layout_constraintTop_toTopOf="parent"
         tools:textColor="#481c8e"
-        tools:textSize="36sp" />
+        tools:textSize="30sp" />
 
 </android.support.constraint.ConstraintLayout>
