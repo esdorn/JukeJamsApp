@@ -1,13 +1,16 @@
 package com.example.jukejams;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
-public class OurConnector extends AppCompatActivity {
+public class OurConnector extends AppCompatActivity implements View.OnClickListener{
 
     private TextView mTextMessage;
 
@@ -39,6 +42,12 @@ public class OurConnector extends AppCompatActivity {
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+    }
+
+    public void onClick(View view) {
+        //Do something in response to button click
+        Intent intObj = new Intent(this, Join.class);
+        startActivity(intObj);
     }
 
 }
