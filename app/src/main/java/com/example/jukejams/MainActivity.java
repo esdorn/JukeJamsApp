@@ -44,8 +44,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick(View v){
-        Intent intObj = new Intent(this, OurConnector.class);
-        startActivity(intObj);
+        
 
     }
 

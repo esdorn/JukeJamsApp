@@ -9,17 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".JoinActivity"></activity>
-        <activity
-            android:name=".Join"
-            android:label="@string/title_activity_join"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Host"
-            android:label="@string/title_activity_host"></activity>
-        <activity
-            android:name=".OurConnector"
-            android:label="@string/title_activity_our_connector" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">
