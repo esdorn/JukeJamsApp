@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
         android:id="@+id/navigation_host_or_join"
-        android:icon="@drawable/ic_home_black_24dp"
+        android:icon="@android:drawable/ic_menu_share"
         android:title="@string/title_host_or_join" />
 
     <item
