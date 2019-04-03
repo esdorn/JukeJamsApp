@@ -35,8 +35,8 @@ public class MainActivity extends AppCompatActivity {
                                 break;
                             // TODO: Change this to match the one above once we have those fragments
                             case R.id.navigation_home:
-                                mTextMessage.setText(R.string.title_dashboard);
-                                return true;
+                                selectedFragment = Home.newInstance();
+                                break;
                             case R.id.navigation_notifications:
                                 mTextMessage.setText(R.string.title_notifications);
                                 return true;
@@ -48,6 +48,9 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
                 //Once we have a home fragment put that in here- so that we start there
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.frame_layout, Home.newInstance());
+                transaction.commit();
 
 
 
