@@ -33,13 +33,13 @@ public class MainActivity extends AppCompatActivity {
                             case R.id.navigation_host_or_join:
                                 selectedFragment = HostOrJoinConnector.newInstance();
                                 break;
-                            // TODO: Change this to match the one above once we have those fragments
+                            
                             case R.id.navigation_home:
-                                mTextMessage.setText(R.string.title_dashboard);
-                                return true;
-                            case R.id.navigation_notifications:
-                                mTextMessage.setText(R.string.title_notifications);
-                                return true;
+                                selectedFragment = Home.newInstance();
+                                break;
+                            case R.id.navigation_mymusic:
+                                selectedFragment = MyMusic.newInstance();
+                                break;
                         }
                         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                         transaction.replace(R.id.frame_layout, selectedFragment);
@@ -48,6 +48,9 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
                 //Once we have a home fragment put that in here- so that we start there
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.frame_layout, Home.newInstance());
+                transaction.commit();
 
 
 
