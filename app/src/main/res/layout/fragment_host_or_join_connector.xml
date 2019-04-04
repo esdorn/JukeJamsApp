@@ -1,14 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HostOrJoinConnector">
+    tools:context=".HostOrJoinConnector" >
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="323dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="300dp"
+            android:fontFamily="sans-serif"
+            android:text="Join Party"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:background="#4c71f7"
+            tools:fontFamily="sans-serif"
+            tools:textColor="#ffffff"
+            tools:textSize="30sp" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="323dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="240dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="sans-serif"
+            android:text="Create Party"
+            android:textAllCaps="false"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="#4c71f7"
+            tools:fontFamily="sans-serif"
+            tools:textColor="#ffffff"
+            tools:textSize="30sp" />
+    </android.support.constraint.ConstraintLayout>
 
 </FrameLayout>
