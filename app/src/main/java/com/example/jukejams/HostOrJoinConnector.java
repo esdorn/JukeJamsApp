@@ -1,9 +1,11 @@
 package com.example.jukejams;
 
+import android.app.Activity;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,8 +26,8 @@ public class HostOrJoinConnector extends Fragment {
         return fragment;
     }
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
+
+    public void onCreate(Bundle savedInstanceState, FragmentTransaction temp) {
         super.onCreate(savedInstanceState);
     }
     
@@ -33,6 +35,17 @@ public class HostOrJoinConnector extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_host_or_join_connector, container, false);
+    }
+
+    public void host(View view)
+    {
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.replace(R.id.frame_layout,Host.newInstance());
+    }
+    public void join(View view)
+    {
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.replace(R.id.frame_layout,Join.newInstance());
     }
 }
     
