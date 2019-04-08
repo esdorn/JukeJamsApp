@@ -39,12 +39,12 @@ public class HostOrJoinConnector extends Fragment {
 
     public void host(View view)
     {
-        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.frame_layout,Host.newInstance());
     }
     public void join(View view)
     {
-        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.frame_layout,Join.newInstance());
     }
 }
