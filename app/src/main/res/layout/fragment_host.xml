@@ -11,27 +11,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/textInputEditText"
-            android:layout_width="385dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:fontFamily="sans-serif"
-            android:hint="Code"
-            android:textColorHint="#000000"
-            android:textSize="24sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.2"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.515"
-            tools:fontFamily="sans-serif"
-            tools:textSize="24sp" />
-
         <Button
             android:id="@+id/button"
             android:layout_width="331dp"
