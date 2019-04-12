@@ -73,12 +73,19 @@ public class MainActivity extends FragmentActivity {
         transaction.commit();
     }
 
-    public void onClick(View v){
-        
+    public void JoinParty(View v){
 
+        //FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        //transaction.replace(R.id.frame_layout,PartyJoin.newInstance());
+        //transaction.commit();
     }
 
 
+    public void HostParty(View v){
 
+        //FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        //transaction.replace(R.id.frame_layout,PartyHost.newInstance());
+        //transaction.commit();
+    }
 
 }
