@@ -34,7 +34,7 @@ public class MainActivity extends FragmentActivity {
                             case R.id.navigation_host_or_join:
                                 selectedFragment = HostOrJoinConnector.newInstance();
                                 break;
-                            
+
                             case R.id.navigation_home:
                                 selectedFragment = Home.newInstance();
                                 break;
@@ -43,7 +43,7 @@ public class MainActivity extends FragmentActivity {
                                 break;
                         }
                         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                        transaction.replace(R.id.frame_layout, selectedFragment);
+                        transaction.replace(R.id.frame_layout, selectedFragment); //change selected to name navigation_home
                         transaction.commit();
                         return true;
                     }
@@ -77,6 +77,8 @@ public class MainActivity extends FragmentActivity {
         
 
     }
+
+
 
 
 }
