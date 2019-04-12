@@ -5,13 +5,14 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends FragmentActivity {
 
     private TextView mTextMessage;
 
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
                             case R.id.navigation_host_or_join:
                                 selectedFragment = HostOrJoinConnector.newInstance();
                                 break;
-                            
+
                             case R.id.navigation_home:
                                 selectedFragment = Home.newInstance();
                                 break;
@@ -42,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                                 break;
                         }
                         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                        transaction.replace(R.id.frame_layout, selectedFragment);
+                        transaction.replace(R.id.frame_layout, selectedFragment); //change selected to name navigation_home
                         transaction.commit();
                         return true;
                     }
@@ -59,10 +60,25 @@ public class MainActivity extends AppCompatActivity {
         //navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
 
+    public void Host(View view)
+    {
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.frame_layout,Host.newInstance());
+        transaction.commit();
+    }
+    public void Join(View view)
+    {
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.frame_layout,Join.newInstance());
+        transaction.commit();
+    }
+
     public void onClick(View v){
         
 
     }
+
+
 
 
 }
