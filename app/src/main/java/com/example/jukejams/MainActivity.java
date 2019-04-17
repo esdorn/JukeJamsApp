@@ -10,12 +10,13 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends FragmentActivity {
 
     private TextView mTextMessage;
-
+    private Connector connect;
 
 
     @Override
@@ -74,18 +75,13 @@ public class MainActivity extends FragmentActivity {
     }
 
     public void JoinParty(View v){
-
-        //FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        //transaction.replace(R.id.frame_layout,PartyJoin.newInstance());
-        //transaction.commit();
+        String code = ((EditText)findViewById(R.id.codeInput)).getText().toString();
+        connect = new Connector((TextView)findViewById(R.id.textView3),getSupportFragmentManager().beginTransaction());
+        connect.execute(code);
     }
 
 
     public void HostParty(View v){
-
-        //FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        //transaction.replace(R.id.frame_layout,PartyHost.newInstance());
-        //transaction.commit();
     }
 
 }

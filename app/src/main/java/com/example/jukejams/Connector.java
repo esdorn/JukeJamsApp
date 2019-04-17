@@ -10,15 +10,17 @@ import java.util.Scanner;
 public class Connector extends AsyncTask<String, String, String> {
     private TextView output;
     private boolean con;
-    public Connector(TextView t)
+    FragmentTransaction transaction;
+    public Connector(TextView t, FragmentTransaction tran)
     {
         output = t;
+        transaction = tran;
     }
 
     protected String doInBackground(String... code)
     {
         String code1;
-        try (Socket s = new Socket("10.7.22.6",6709))
+        try (Socket s = new Socket("10.7.20.17",6710))
         {
             Scanner in = new Scanner(s.getInputStream());
             PrintWriter out = new PrintWriter(s.getOutputStream());
@@ -46,7 +48,8 @@ public class Connector extends AsyncTask<String, String, String> {
     protected void onPostExecute(String message) {
         if (con)
         {
-            
+            transaction.replace(R.id.frame_layout,PartyJoin.newInstance());
+            transaction.commit();
         }
         else {
             output.setText(message);
