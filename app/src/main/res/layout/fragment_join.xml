@@ -49,6 +49,9 @@
             android:hint="Room Code"
             android:inputType="number"
             android:textColor="@android:color/white"
+            android:textColorHighlight="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:textColorLink="@android:color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
