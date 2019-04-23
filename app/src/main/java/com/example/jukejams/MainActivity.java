@@ -80,8 +80,9 @@ public class MainActivity extends FragmentActivity {
         connect.execute(code);
     }
 
-
     public void HostParty(View v){
+        connect = new Connector((TextView)findViewById(R.id.textView4),getSupportFragmentManager().beginTransaction());
+        connect.execute();
     }
 
 }
