@@ -5,7 +5,7 @@
     <item
         android:id="@+id/navigation_host_or_join"
         android:icon="@android:drawable/ic_menu_share"
-        android:title="@string/title_host_or_join" />
+        android:title="@string/title_my_account" />
 
     <item
         android:id="@+id/navigation_home"

@@ -33,11 +33,11 @@ public class MainActivity extends FragmentActivity {
                         Fragment selectedFragment = null;
                         switch (item.getItemId()) {
                             case R.id.navigation_host_or_join:
-                                selectedFragment = HostOrJoinConnector.newInstance();
+                                selectedFragment = Account.newInstance();
                                 break;
 
                             case R.id.navigation_home:
-                                selectedFragment = Home.newInstance();
+                                selectedFragment = HostOrJoinConnector.newInstance();
                                 break;
                             case R.id.navigation_mymusic:
                                 selectedFragment = MyMusic.newInstance();
@@ -51,7 +51,7 @@ public class MainActivity extends FragmentActivity {
                 });
                 //Once we have a home fragment put that in here- so that we start there
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                transaction.replace(R.id.frame_layout, Home.newInstance());
+                transaction.replace(R.id.frame_layout, HostOrJoinConnector.newInstance());
                 transaction.commit();
 
 
