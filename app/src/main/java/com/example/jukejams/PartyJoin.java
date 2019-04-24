@@ -60,13 +60,16 @@ public class PartyJoin extends Fragment {
         public int getItemCount(){
             return dataSource.length;
         }
+
     }
 
     public static class SimpleViewHolder extends RecyclerView.ViewHolder{
         public TextView textView;
+        //create Button here
         public SimpleViewHolder(View itemView){
             super(itemView);
             textView = (TextView) itemView;
+            textView = R.layout
         }
     }
 }
