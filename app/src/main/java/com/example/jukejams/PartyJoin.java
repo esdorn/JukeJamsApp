@@ -5,12 +5,17 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.CardView;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class PartyJoin extends Fragment {
@@ -35,7 +40,13 @@ public class PartyJoin extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         RecyclerView rv = new RecyclerView(getContext());
-        //rv.setLayoutManager(new LayoutManager(getContext()));
+        LinearLayoutManager llm = new LinearLayoutManager(getContext());
+        rv.setLayoutManager(llm);
+        List<String> songs = new ArrayList<>();
+        songs.add("YYZ");
+        songs.add("Detroit Rock City");
+        songs.add("Vertigo");
+        songs.add("Jumpsuit");
         return inflater.inflate(R.layout.fragment_party_join, container, false);
     }
 
@@ -54,7 +65,7 @@ public class PartyJoin extends Fragment {
 
         @Override
         public void onBindViewHolder(SimpleViewHolder holder, int position){
-            holder.textView.setText(dataSource[position]);
+            holder.song.setText(dataSource[position]);
         }
 
         @Override
@@ -67,10 +78,18 @@ public class PartyJoin extends Fragment {
     public static class SimpleViewHolder extends RecyclerView.ViewHolder{
         public TextView textView;
         public Button buttonView;
+        CardView cv;
+        TextView song;
+        Button up;
+        Button down;
+        //TextView rate;
+
         public SimpleViewHolder(View itemView){
             super(itemView);
-            textView = (TextView) itemView;
-            //textView = R.layout
+            cv = (CardView) itemView.findViewById(R.id.cv);
+            song = (TextView) itemView.findViewById(R.id.textView5);
+            up = (Button) itemView.findViewById(R.id.button6);
+            down = (Button) itemView.findViewById(R.id.button7);
         }
     }
 }
