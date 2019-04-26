@@ -70,7 +70,7 @@ public class MainActivity extends FragmentActivity {
     public void Join(View view)
     {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.frame_layout,Join.newInstance());
+        transaction.replace(R.id.frame_layout,PartyJoin.newInstance());
         transaction.commit();
     }
 

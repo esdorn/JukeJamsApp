@@ -39,7 +39,12 @@ public class PartyJoin extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        RecyclerView rv = new RecyclerView(getContext());
+        return inflater.inflate(R.layout.fragment_party_join, container, false);
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        RecyclerView rv = (RecyclerView)getView().findViewById(R.id.rv);
         LinearLayoutManager llm = new LinearLayoutManager(getContext());
         rv.setLayoutManager(llm);
         List<String> songs = new ArrayList<>();
@@ -47,37 +52,41 @@ public class PartyJoin extends Fragment {
         songs.add("Detroit Rock City");
         songs.add("Vertigo");
         songs.add("Jumpsuit");
-        return inflater.inflate(R.layout.fragment_party_join, container, false);
+        SimpleRVAdapter adapter = new SimpleRVAdapter(songs);
+        rv.setAdapter(adapter);
     }
 
     public class SimpleRVAdapter extends RecyclerView.Adapter<SimpleViewHolder>{
-        private String[] dataSource;
-        public SimpleRVAdapter (String[] dataArgs){
+        private List<String> dataSource;
+        public SimpleRVAdapter (List<String> dataArgs){
             dataSource = dataArgs;
         }
 
         @Override
         public SimpleViewHolder onCreateViewHolder (ViewGroup parent, int viewType){
-            View view = new TextView(parent.getContext());
-            SimpleViewHolder viewHolder = new SimpleViewHolder(view);
-            return viewHolder;
+            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.songcards, parent, false);
+            SimpleViewHolder pvh = new SimpleViewHolder(v);
+            return pvh;
         }
 
         @Override
         public void onBindViewHolder(SimpleViewHolder holder, int position){
-            holder.song.setText(dataSource[position]);
+            holder.song.setText(dataSource.get(position));
+        }
+
+        @Override
+        public void onAttachedToRecyclerView(RecyclerView recyclerView) {
+            super.onAttachedToRecyclerView(recyclerView);
         }
 
         @Override
         public int getItemCount(){
-            return dataSource.length;
+            return dataSource.size();
         }
 
     }
 
     public static class SimpleViewHolder extends RecyclerView.ViewHolder{
-        public TextView textView;
-        public Button buttonView;
         CardView cv;
         TextView song;
         Button up;
