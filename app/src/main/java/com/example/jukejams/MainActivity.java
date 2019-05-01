@@ -72,6 +72,13 @@ public class MainActivity extends FragmentActivity {
         transaction.commit();
     }
 
+    public void About(View view)
+    {
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.frame_layout,About.newInstance());
+        transaction.commit();
+    }
+
     public void JoinParty(View v){
         String code = ((EditText)findViewById(R.id.codeInput)).getText().toString();
         connect = new Connector((TextView)findViewById(R.id.textView3),getSupportFragmentManager().beginTransaction());

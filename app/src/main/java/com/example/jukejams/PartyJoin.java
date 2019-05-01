@@ -97,8 +97,8 @@ public class PartyJoin extends Fragment {
             super(itemView);
             cv = (CardView) itemView.findViewById(R.id.cv);
             song = (TextView) itemView.findViewById(R.id.textView5);
-            up = (Button) itemView.findViewById(R.id.button6);
-            down = (Button) itemView.findViewById(R.id.button7);
+            up = (Button) itemView.findViewById(R.id.imageButton);
+            down = (Button) itemView.findViewById(R.id.imageButton2);
         }
     }
 }
