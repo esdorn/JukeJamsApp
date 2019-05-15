@@ -1,0 +1,72 @@
+How to Do what we did - Good Luck!
+
+We used Android Studio
+First we farmilazired ourselves by creating a basic demo app https://developer.android.com/training/basics/firstapp/ 
+Another major resources was the developed android information on connectivity https://developer.android.com/guide/topics/connectivity/ and the Java book https://drive.google.com/file/d/1hXJyfY4RTOvpm9EGviOjTWfimlAhIvHc/view 
+Created the basic app- just open the android studio
+
+
+For our Server and Networking element 
+Used as a middleman to Connect phones to one another
+Required use of a server socket
+With the server socket one can create a connection (socket) with the phone so data can be transferred
+With the socet one is able to get the host phone's ip then transfer that to another phone so it can connect to it
+Use a map to get the host phone with the required code
+
+
+For the Navigation Bar and Fragments
+https://code.tutsplus.com/tutorials/how-to-code-a-bottom-navigation-bar-for-an-android-app--cms-30305 
+Used the above link to get a general understanding
+In android studio created a new activity and created it as a navigation bar 
+Moved that navigation bar into the main page code
+Customized it as needed for the client
+When moving the code with github make sure all of the packages are update, so that it displays. Sometimes the gradle doesn’t automatically download the navigation bar
+Fragments- related to navigation bar
+The most useful link we used for help was this one https://www.truiton.com/2017/01/android-bottom-navigation-bar-example/ 
+We also used this link to help https://guides.codepath.com/android/creating-and-using-fragments#understanding-fragments
+To create a Fragment click on ‘File’ ‘New’ ‘Fragments’ ‘Fragment (Blank)’
+Use all the basic default settings
+Android Studio will create this with a lot of code in the java file. You really don’t need any of that. We simply used the same code as seen in the link under ‘i’ 
+Continue creating fragments like that to use for the navigation bar
+
+
+Fragments General- Tips and Tricks
+In most recent android apps, there is one MainActivty and then lots of Fragments that go off that page. You can connect them together with buttons or with a navigation bar as we did 
+When working with the xml file of a fragment make sure that you use a constraint layout before you place any design. This will ensure that you can properly place your text boxes, etc. 
+To connect fragments, code all of that code in the MainActivity
+If you want to have one fragment open another one, with say a button, that method will still have to be coded inside the MainActivity, but then reference it inside the xml file where the button is and use a click event to connect the two fragments. 
+Also if you want to open automatically a fragment, just code that on the MainActivity this way you can have it automatically open. If you are using a navigation bar, this is the only way to operate, however, if you have a button to open a fragment, you can use the MainActivity as the first page to display. 
+
+
+RecyclerView
+We used this link to give us a basic idea https://developer.android.com/guide/topics/ui/layout/recyclerview
+Then we had to change and adapt some parts to be able to use it with a fragment for which we used this https://code.tutsplus.com/tutorials/getting-started-with-recyclerview-and-cardview-on-android--cms-23465 to help us 
+Now that we had the basic RecyclerView implemented we had to do some more research on how to use it for our specific needs, as we needed to have three parts to each single item. https://code.tutsplus.com/tutorials/getting-started-with-recyclerview-and-cardview-on-android--cms-23465 
+
+General Tips
+Android Studios sometimes has updates, which can take up to half the period, and always make sure that all group members are on the same update. 
+Github will be a bit of a pain
+Try to make sure that you all work on different pages and communicate what you are doing and when you are committing, pushing and pulling
+Also it is really hard to work with branches, especially in Android Studio. Rather it is easier if everyone is using master and once someone is done with their task or the first part they can commit, push and then when needed the other team members can pull. 
+Sometimes you will overwrite each others changes, but you can usually merge them, either by just copying over the correct one or going through it line by line, which Android Studio makes quite easy as a window will pop up with these options and help you to do that correctly. 
+Also if you add any images or icons, you have to add that to the list of files that Github is keeping track of, so when you are committing you should be able to check the box so that those new files will get committed too. 
+Also if you do need a server, the school computers won’t let you access that, so you have to use a home computer
+If you have a client, try to update them often and make sure that they already know all parts of their app before starting the work
+Also, Android Studio will often have warnings, if your code is either lazily coded or not as professionally as they would like. It is okay to ignore them, though just know that if this was a big project you most likely couldn’t as they are important. 
+How to download the github data into Android Studio
+Open android studio
+Select project from version control
+Choose git
+Input the github url
+
+To transfer the app to another phone (real one) it is relatively easy 
+First install the OEM driver using this link (you will probably want to be on the admin account of the school computers) https://developer.android.com/studio/run/oem-usb.html
+Go into the android phones settings
+Click the build number 7 times
+Then go into the developer mode menu
+Flip the enable usb debug
+Next plug in the phone to the computer using the usb
+Allow the computer to make changes on the phone
+Allow usb debug on phone
+Run the program like you would an emulator
+Select the phone
